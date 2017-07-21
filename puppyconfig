@@ -1,0 +1,172 @@
+node "nickeli.llnl.gov" {
+
+file { '/root/etc/hosts':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/hosts"
+,}
+
+file { '/root/etc/hostname':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/hostname"
+,}
+
+file { '/root/etc/resolv.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/resolv.conf"
+,}
+
+file { '/root/etc/sysconfig/network-scripts/ifcfg-em2':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/ifcfg-em2"
+,}
+
+file { '/root/tftpboot/pxelinux.cfg/default':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/default"
+,}
+
+file { '/root/etc/vsftpd/vsftpd.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/vsftpd.conf"
+,}
+
+file { '/root/etc/sysconfig/network-scripts/ifcfg-em1':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/ifcfg-em1"
+,}
+
+file { '/root/etc/xinetd.d/tftp':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/tftp"
+,}
+
+file { '/root/tftpboot/ftp/pub/anaconda-ks.cfg':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0755",
+    source => "/root/Nickel-Puppet/etc/anaconda-ks.cfg"
+,}
+
+file { '/root/etc/sysconfig/iptables':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0600",
+    source => "/root/Nickel-Puppet/etc/iptables"
+,}
+
+file { '/root/etc/sysconfig/network-scripts/ifcfg-ib0':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/ifcfg-ib0"
+,}
+file { '/root/etc/vsftpd/vsftpd.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0400",
+    source => "/root/Nickel-Puppet/etc/vsftpd.conf"
+,}
+
+file { '/root/etc/profile.d/mpi.sh':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/mpi.sh"
+,}
+
+file { '/root/etc/dhcp/dhcpd.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/dhcpd.conf"
+,}
+
+file { '/root/etc/passwd':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/passwd"
+,}
+
+file { '/root/etc/group':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/group"
+,}
+
+file { '/root/etc/shadow':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0000",
+    source => "/root/Nickel-Puppet/etc/shadow"
+,}
+
+file { '/root/etc/gshadow':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0000",
+    source => "/root/Nickel-Puppet/etc/gshadow"
+,}
+
+file { '/root/etc/slurm/slurm.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/slurm.conf"
+,}
+
+file { '/root/etc/exports':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/exports"
+,}
+
+file { '/root/etc/fstab':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/fstab"
+
+,}
+
+} # End node nickeli.llnl.gov
+

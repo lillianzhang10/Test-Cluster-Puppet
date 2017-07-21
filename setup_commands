@@ -1,0 +1,6 @@
+parted /dev/sdb mklabel gpt
+parted /dev/sdb mkpart primary xfs 0% 100%
+mkfs -t xfs -f /dev/sdb1
+mkdir -m 755 /tftpboot
+echo '/dev/sdb1           /tftpboot       xfs    defaults        0 0'>> /etc/fstab
+mount /tftpboot
