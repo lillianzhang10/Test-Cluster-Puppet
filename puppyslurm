@@ -1,0 +1,62 @@
+#node "nickeli.llnl.gov", "enickel2.llnl.gov", "enickel3.llnl.gov", "enickel4.llnl.gov", "enickel5.llnl.gov", "enickel6.llnl.gov", "enickel7.llnl.gov", "enickel8.llnl.gov" "enickel9.llnl.gov", "enickel10.llnl.gov", "enickel11.llnl.gov", {
+
+node "enickel8.llnl.gov" {
+
+package { 'wget':
+     ensure => present,
+}
+
+package { 'rpm-build':
+     ensure => present,
+}
+
+package { 'bzip2-devel':
+     ensure => present,
+}
+
+package { 'perl-ExtUtils-MakeMaker':
+     ensure => present,
+}
+
+package { 'perl-Switch':
+     ensure => present,
+}
+
+package { 'openssl':
+     ensure => present,
+}
+
+package { 'openssl-devel':
+     ensure => present,
+}
+
+package { 'pam-devel':
+     ensure => present,
+}
+
+package { 'readline-devel':
+     ensure => present,
+}
+
+package { 'munge':
+     provider => 'rpm',
+     install_options => ['-i', '-v', '-h'],
+     source => './slurmie-munge/RPMS/x86_64/munge-*',
+     ensure => present,
+}
+
+package { 'slurm':
+     provider => 'rpm',
+     install_options => ['-i', '-v', '-h'],
+     source => './slurmie-munge/RPMS/x86_64/slurm-*',
+     ensure => present,
+}
+
+file { '/var/spool/slurm':
+     ensure => "directory",
+     owner => "slurm",
+     group => "slurm",
+     mode => "0755",
+}
+
+}
