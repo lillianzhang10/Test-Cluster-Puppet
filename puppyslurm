@@ -59,4 +59,43 @@ file { '/var/spool/slurm':
      mode => "0755",
 }
 
+service { 'munge':
+     ensure => present,
+     enable => true,
 }
+
+user { 'slurm':
+     ensure => present,
+     shell => "sbin/nologin",
+     system => true,
+}
+
+file { '/var/log/slurm':
+     ensure => "directory",
+     owner => "slurm",
+     group => "slurm",
+     mode => "0755",
+}
+
+# slurm.conf is in the files puppyconf[i,2-11]
+
+} # End nodes nickeli and enickel[2-11]
+
+#Note: start slurmctld on nickeli and slurmd everywhere else
+node "nickeli.llnl.gov" {
+
+service { 'slurmctld':
+     ensure => running,
+     enable => true,
+}
+
+} # End nickeli
+
+node "enickel2.llnl.gov", "enickel3.llnl.gov", "enickel4.llnl.gov", "enickel5.llnl.gov", "enickel6.llnl.gov", "enickel7.llnl.gov", "enickel8.llnl.gov" "enickel9.llnl.gov", "enickel10.llnl.gov", "enickel11.llnl.gov", {
+
+service { 'slurmd':
+     ensure => running,
+     enable => true,
+}
+
+} # End enickel[2-11]
