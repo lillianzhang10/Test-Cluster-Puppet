@@ -5,7 +5,7 @@ file { '/home/jessica':
   ensure => directory,
   owner => 'jessica',
   group => 'jessica',
-  mode => '755',
+  mode => '700',
 }
 
 user { 'jessica':
@@ -17,7 +17,7 @@ file { '/home/mai':
   ensure => directory,
   owner => 'mai',
   group => 'mai',
-  mode => '755',
+  mode => '700',
 }
 
 user { 'mai':
@@ -29,7 +29,7 @@ file { '/home/zhang53':
   ensure => directory,
   owner => 'zhang53',
   group => 'zhang53',
-  mode => '755',
+  mode => '700',
 }
 
 user { 'zhang53':
@@ -41,7 +41,7 @@ file { '/home/cephdeploy':
   ensure => directory,
   owner => 'cephdeploy',
   group => 'cephdeploy',
-  mode => '755',
+  mode => '700',
 }
 
 user { 'cephdeploy':
