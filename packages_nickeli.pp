@@ -3,6 +3,56 @@
 
 node "nickeli.llnl.gov" {
 
+# Cluster Build Guide - CentOS 7 Install of Cluster
+# This section only applies to the admin node
+
+package { 'syslinux':
+  ensure => present,
+}
+
+package { 'tftp-server':
+  ensure => present,
+}
+
+package { 'vsftpd':
+  ensure => present,
+}
+
+package { 'tftp':
+  ensure => present,
+}
+
+service { 'vsftpd':
+  ensure => running,
+  enable => true,
+}
+
+package { 'dhcp':
+  ensure => present,
+}
+
+service { 'dhcp':
+  ensure => running,
+  enable => true,
+}
+
+package { 'xinetd':
+  ensure => present,
+}
+
+service { 'xinetd':
+  ensure => running,
+  enable => true,
+}
+
+package { 'ftp':
+  ensure => present,
+}
+
+package { 'pykickstart':
+  ensure => present,
+}
+
 # Cluster Build Guide - Setup NTP
 
 package { 'ntp':
@@ -24,8 +74,8 @@ service { 'ntpd':
 
 # Cluster Build Guide - Install Additional Packages
 
-package { 'iptables-service':
-  name => 'iptables-service',
+package { 'iptables-services':
+  name => 'iptables-services',
   ensure => present,
 }
 
@@ -95,8 +145,5 @@ service { 'opensm':
   enable => true,
   provider => 'systemd',
 }
-
-
-
 
 } # End node nickeli

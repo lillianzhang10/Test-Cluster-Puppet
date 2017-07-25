@@ -1,0 +1,13 @@
+
+#
+# /etc/fstab
+# Created by anaconda on Fri Jun 30 18:08:44 2017
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/cl_enickel4-root /                       xfs     defaults        0 0
+UUID=33d4e3fd-5063-4d4e-b829-52d04cf3ddf8 /boot                   xfs     defaults        0 0
+#/dev/mapper/cl_enickel4-home /home                   xfs     defaults        0 0
+/dev/mapper/cl_enickel4-swap swap                    swap    defaults        0 0
+nickel1:/home  /home  nfs  defaults  0 0

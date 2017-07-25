@@ -1,0 +1,108 @@
+node "enickel8.llnl.gov" {
+
+file { '/etc/hosts':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/hosts"
+,}
+
+file { '/etc/hostname':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/node8/hostname"
+,}
+
+file { '/etc/resolv.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/node8/resolv.conf"
+,}
+
+file { '/etc/sysconfig/network-scripts/ifcfg-em2':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/node8/ifcfg-em2"
+,}
+
+file { '/etc/sysconfig/network-scripts/ifcfg-em1':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/node8/ifcfg-em1"
+,}
+
+file { '/etc/sysconfig/network-scripts/ifcfg-ib0':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/node8/ifcfg-ib0"
+,}
+
+file { '/etc/profile.d/mpi.sh':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/mpi.sh"
+,}
+
+file { '/etc/dhcp/dhcpd.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/dhcpd.conf"
+,}
+
+file { '/etc/passwd':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/passwd"
+,}
+
+file { '/etc/group':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/group"
+,}
+
+file { '/etc/slurm/slurm.conf':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/etc/slurm.conf"
+,}
+
+file { '/etc/exports':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/node8/exports"
+,}
+
+file { '/etc/fstab':
+    ensure => "file",
+    owner => "root",
+    group => "root",
+    mode => "0644",
+    source => "/root/Nickel-Puppet/node8/fstab"
+,}
+
+} # End node enickel8.llnl.gov
+

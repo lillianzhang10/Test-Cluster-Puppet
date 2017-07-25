@@ -1,6 +1,6 @@
 node "nickeli.llnl.gov" {
 
-file { '/root/etc/hosts':
+file { '/etc/hosts':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -8,7 +8,7 @@ file { '/root/etc/hosts':
     source => "/root/Nickel-Puppet/etc/hosts"
 ,}
 
-file { '/root/etc/hostname':
+file { '/etc/hostname':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -16,7 +16,7 @@ file { '/root/etc/hostname':
     source => "/root/Nickel-Puppet/etc/hostname"
 ,}
 
-file { '/root/etc/resolv.conf':
+file { '/etc/resolv.conf':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -24,7 +24,7 @@ file { '/root/etc/resolv.conf':
     source => "/root/Nickel-Puppet/etc/resolv.conf"
 ,}
 
-file { '/root/etc/sysconfig/network-scripts/ifcfg-em2':
+file { '/etc/sysconfig/network-scripts/ifcfg-em2':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -32,7 +32,7 @@ file { '/root/etc/sysconfig/network-scripts/ifcfg-em2':
     source => "/root/Nickel-Puppet/etc/ifcfg-em2"
 ,}
 
-file { '/root/tftpboot/pxelinux.cfg/default':
+file { '/tftpboot/pxelinux.cfg/default':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -40,7 +40,7 @@ file { '/root/tftpboot/pxelinux.cfg/default':
     source => "/root/Nickel-Puppet/etc/default"
 ,}
 
-file { '/root/etc/vsftpd/vsftpd.conf':
+file { '/etc/vsftpd/vsftpd.conf':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -48,7 +48,7 @@ file { '/root/etc/vsftpd/vsftpd.conf':
     source => "/root/Nickel-Puppet/etc/vsftpd.conf"
 ,}
 
-file { '/root/etc/sysconfig/network-scripts/ifcfg-em1':
+file { '/etc/sysconfig/network-scripts/ifcfg-em1':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -56,7 +56,7 @@ file { '/root/etc/sysconfig/network-scripts/ifcfg-em1':
     source => "/root/Nickel-Puppet/etc/ifcfg-em1"
 ,}
 
-file { '/root/etc/xinetd.d/tftp':
+file { '/etc/xinetd.d/tftp':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -64,7 +64,7 @@ file { '/root/etc/xinetd.d/tftp':
     source => "/root/Nickel-Puppet/etc/tftp"
 ,}
 
-file { '/root/tftpboot/ftp/pub/anaconda-ks.cfg':
+file { '/tftpboot/ftp/pub/anaconda-ks.cfg':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -72,7 +72,7 @@ file { '/root/tftpboot/ftp/pub/anaconda-ks.cfg':
     source => "/root/Nickel-Puppet/etc/anaconda-ks.cfg"
 ,}
 
-file { '/root/etc/sysconfig/iptables':
+file { '/etc/sysconfig/iptables':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -80,14 +80,15 @@ file { '/root/etc/sysconfig/iptables':
     source => "/root/Nickel-Puppet/etc/iptables"
 ,}
 
-file { '/root/etc/sysconfig/network-scripts/ifcfg-ib0':
+file { '/etc/sysconfig/network-scripts/ifcfg-ib0':
     ensure => "file",
     owner => "root",
     group => "root",
     mode => "0644",
     source => "/root/Nickel-Puppet/etc/ifcfg-ib0"
 ,}
-file { '/root/etc/vsftpd/vsftpd.conf':
+
+file { '/etc/vsftpd/vsftpd.conf':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -95,7 +96,7 @@ file { '/root/etc/vsftpd/vsftpd.conf':
     source => "/root/Nickel-Puppet/etc/vsftpd.conf"
 ,}
 
-file { '/root/etc/profile.d/mpi.sh':
+file { '/etc/profile.d/mpi.sh':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -103,7 +104,7 @@ file { '/root/etc/profile.d/mpi.sh':
     source => "/root/Nickel-Puppet/etc/mpi.sh"
 ,}
 
-file { '/root/etc/dhcp/dhcpd.conf':
+file { '/etc/dhcp/dhcpd.conf':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -111,7 +112,7 @@ file { '/root/etc/dhcp/dhcpd.conf':
     source => "/root/Nickel-Puppet/etc/dhcpd.conf"
 ,}
 
-file { '/root/etc/passwd':
+file { '/etc/passwd':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -119,7 +120,7 @@ file { '/root/etc/passwd':
     source => "/root/Nickel-Puppet/etc/passwd"
 ,}
 
-file { '/root/etc/group':
+file { '/etc/group':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -127,23 +128,7 @@ file { '/root/etc/group':
     source => "/root/Nickel-Puppet/etc/group"
 ,}
 
-file { '/root/etc/shadow':
-    ensure => "file",
-    owner => "root",
-    group => "root",
-    mode => "0000",
-    source => "/root/Nickel-Puppet/etc/shadow"
-,}
-
-file { '/root/etc/gshadow':
-    ensure => "file",
-    owner => "root",
-    group => "root",
-    mode => "0000",
-    source => "/root/Nickel-Puppet/etc/gshadow"
-,}
-
-file { '/root/etc/slurm/slurm.conf':
+file { '/etc/slurm/slurm.conf':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -151,7 +136,7 @@ file { '/root/etc/slurm/slurm.conf':
     source => "/root/Nickel-Puppet/etc/slurm.conf"
 ,}
 
-file { '/root/etc/exports':
+file { '/etc/exports':
     ensure => "file",
     owner => "root",
     group => "root",
@@ -159,7 +144,7 @@ file { '/root/etc/exports':
     source => "/root/Nickel-Puppet/etc/exports"
 ,}
 
-file { '/root/etc/fstab':
+file { '/etc/fstab':
     ensure => "file",
     owner => "root",
     group => "root",
