@@ -1,7 +1,7 @@
 # Checks if certain packages are present on nickeli
 # Also if certain services are running
 
-node "nickeli.llnl.gov" {
+node "tci.llnl.gov" {
 
 # Cluster Build Guide - CentOS 7 Install of Cluster
 # This section only applies to the admin node

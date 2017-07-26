@@ -1,4 +1,4 @@
-node "nickeli.llnl.gov" {
+node "tci.llnl.gov" {
 
 file { '/etc/hosts':
     ensure => "file",
