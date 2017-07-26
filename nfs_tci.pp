@@ -1,5 +1,5 @@
 
-node "nickeli.llnl.gov" {
+node "tci.llnl.gov" {
 
 package { 'nfs-utils':
   ensure => present,

@@ -1,5 +1,5 @@
 
-node "enickel2.llnl.gov", "enickel3.llnl.gov", "enickel4.llnl.gov", "enickel5.llnl.gov", "enickel6.llnl.gov", "enickel7.llnl.gov", "enickel8.llnl.gov" "enickel9.llnl.gov", "enickel10.llnl.gov", "enickel11.llnl.gov", {
+node "etc2.llnl.gov", "etc3.llnl.gov", "etc4.llnl.gov", {
 
 # Note: The edit to /etc/fstab is in the puppyconf[2-11] manifests
 

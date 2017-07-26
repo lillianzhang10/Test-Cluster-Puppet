@@ -3,5 +3,5 @@ DEVICE=ib0
 BOOTPROTO=static
 NAME=ib0
 ONBOOT=yes
-IPADDR=192.168.125.2  # change this to match your network
+IPADDR=192.168.124.2  # change this to match your network
 NETMASK=255.255.224.0

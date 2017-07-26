@@ -6,8 +6,8 @@
 # Accessible filesystems, by reference, are maintained under '/dev/disk'
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
 #
-/dev/mapper/cl_enickel2-root              /                       xfs     defaults        0 0
+/dev/mapper/cl_etc2-root              /                       xfs     defaults        0 0
 UUID=f0698c6b-0124-4816-8097-dd9b785be4d4 /boot                   xfs     defaults        0 0
-# /dev/mapper/cl_enickel2-home            /home                   xfs     defaults        0 0
-/dev/mapper/cl_enickel2-swap              swap                    swap    defaults        0 0
-enickeli:/home		                  /home                   nfs     defaults        0 0
+# /dev/mapper/cl_etc2-home            /home                   xfs     defaults        0 0
+/dev/mapper/cl_etc2-swap              swap                    swap    defaults        0 0
+tc1:/home		                  /home                   nfs     defaults        0 0
