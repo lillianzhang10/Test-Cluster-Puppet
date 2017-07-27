@@ -1,13 +1,13 @@
 
 #
 # /etc/fstab
-# Created by anaconda on Fri Jun 30 18:26:42 2017
+# Created by anaconda on Wed Jul 26 18:40:25 2017
 #
 # Accessible filesystems, by reference, are maintained under '/dev/disk'
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
 #
-/dev/mapper/cl_etc2-root              /                       xfs     defaults        0 0
-UUID=f0698c6b-0124-4816-8097-dd9b785be4d4 /boot                   xfs     defaults        0 0
-# /dev/mapper/cl_etc2-home            /home                   xfs     defaults        0 0
-/dev/mapper/cl_etc2-swap              swap                    swap    defaults        0 0
-tc1:/home		                  /home                   nfs     defaults        0 0
+/dev/mapper/cl_etc2-root /                       xfs     defaults        0 0
+UUID=dae44f41-ec5c-4d7d-ac4d-380c45f146c8 /boot                   xfs     defaults        0 0
+# /dev/mapper/cl_etc2-home /home                   xfs     defaults        0 0
+/dev/mapper/cl_etc2-swap swap                    swap    defaults        0 0
+tc1:/home /home nfs defaults 0 0

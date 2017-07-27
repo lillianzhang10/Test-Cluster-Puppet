@@ -3,6 +3,10 @@ node "etc2.llnl.gov", "etc3.llnl.gov", "etc4.llnl.gov", {
 
 # Note: The edit to /etc/fstab is in the puppyconf[2-11] manifests
 
+package { 'nfs-utils':
+  ensure => present,
+}
+
 mount { '/home':
   ensure => mounted,
   device => 'nickel1:/home',
